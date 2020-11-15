@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            animation: fade 0.3s;
+
+        }
+        body{
+            margin: 0;
+        }
+        .nav{
+            background-color: #333;
+            padding: 10px;
+            margin: 0;
+        }
+        .nav a{
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        .nav a:hover{
+            text-decoration: underline;
+        }
+
+        @keyframes fade{
+            from{
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p{
+            animation: fade 0.4s;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="nav__link" data-link>Dashboard</a>
+        <a href="/posts" class="nav__link" data-link>Posts</a>
+        <a href="/settings" class="nav__link" data-link>Settings</a>
+    </nav>
+
+    <div id="app"></div>
+
+
+    <script type="module" src="/static/js/index.js"></script>
+</body>
+</html>
